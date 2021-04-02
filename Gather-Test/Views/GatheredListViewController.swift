@@ -7,13 +7,14 @@
 
 import UIKit
 
-class GatheredListViewController: UIViewController {
+final class GatheredListViewController: UIViewController {
 
     @IBOutlet private weak var gatheredListTableview: UITableView!
     private let cellIdentifier = "cell-identifier"
     override func viewDidLoad() {
         super.viewDidLoad()
-            
+        
+        setupTableview()
     }
     
     private func setupTableview() {
