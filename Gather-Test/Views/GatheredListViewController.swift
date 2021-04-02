@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GatheredListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
