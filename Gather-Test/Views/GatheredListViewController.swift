@@ -9,6 +9,8 @@ import UIKit
 
 class GatheredListViewController: UIViewController {
 
+    @IBOutlet private weak var gatheredListTableview: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
             
