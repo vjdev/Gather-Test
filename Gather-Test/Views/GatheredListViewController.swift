@@ -43,7 +43,14 @@ extension GatheredListViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
         let gatheredData = gatheredDataArray?[indexPath.row]
-        cell?.textLabel?.text = gatheredData?.imageName
+        cell?.imageView?.image = UIImage(named: gatheredData?.imageName ?? Constants.placeholderImage)
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let selectedItem = gatheredDataArray?[indexPath.row] {
+            let detailViewcontroller = GatheredDetailsViewController.viewcontroller(gatheredData: selectedItem)
+            navigationController?.pushViewController(detailViewcontroller, animated: true)
+        }
     }
 }
