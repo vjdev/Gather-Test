@@ -58,6 +58,8 @@
 		6576EBAB2619B3B0005F922D /* GatheredDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576EBAA2619B3B0005F922D /* GatheredDataManagerTests.swift */; };
 		6576EBB02619C0EF005F922D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576EBAF2619C0EF005F922D /* Constants.swift */; };
 		6576EBB52619C21E005F922D /* GatheredDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576EBB42619C21E005F922D /* GatheredDetailsViewController.swift */; };
+		6576EBC12619CFE4005F922D /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576EBBF2619CFE4005F922D /* ImageCollectionViewCell.swift */; };
+		6576EBC22619CFE4005F922D /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6576EBC02619CFE4005F922D /* ImageCollectionViewCell.xib */; };
 		6586AA622617073600D3D0F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6586AA612617073600D3D0F8 /* AppDelegate.swift */; };
 		6586AA642617073600D3D0F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6586AA632617073600D3D0F8 /* SceneDelegate.swift */; };
 		6586AA662617073600D3D0F8 /* GatheredListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6586AA652617073600D3D0F8 /* GatheredListViewController.swift */; };
@@ -139,6 +141,8 @@
 		6576EBAA2619B3B0005F922D /* GatheredDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatheredDataManagerTests.swift; sourceTree = "<group>"; };
 		6576EBAF2619C0EF005F922D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6576EBB42619C21E005F922D /* GatheredDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatheredDetailsViewController.swift; sourceTree = "<group>"; };
+		6576EBBF2619CFE4005F922D /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		6576EBC02619CFE4005F922D /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		6586AA5E2617073600D3D0F8 /* Gather-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gather-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6586AA612617073600D3D0F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6586AA632617073600D3D0F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -306,6 +310,8 @@
 			children = (
 				6586AA652617073600D3D0F8 /* GatheredListViewController.swift */,
 				6576EBB42619C21E005F922D /* GatheredDetailsViewController.swift */,
+				6576EBBF2619CFE4005F922D /* ImageCollectionViewCell.swift */,
+				6576EBC02619CFE4005F922D /* ImageCollectionViewCell.xib */,
 				6586AA672617073600D3D0F8 /* Main.storyboard */,
 			);
 			path = Views;
@@ -468,6 +474,7 @@
 				65085EFD26170AFF0064F777 /* img0019.json in Resources */,
 				65085F0C26170B000064F777 /* img0016.jpg in Resources */,
 				65085F0726170B000064F777 /* img0005.json in Resources */,
+				6576EBC22619CFE4005F922D /* ImageCollectionViewCell.xib in Resources */,
 				65085F1426170B000064F777 /* img0020.json in Resources */,
 				65085F1F26170B000064F777 /* img0020.jpg in Resources */,
 				65085F1126170B000064F777 /* img0007.jpg in Resources */,
@@ -499,6 +506,7 @@
 			files = (
 				6586AA662617073600D3D0F8 /* GatheredListViewController.swift in Sources */,
 				65EA2DF4261737CB009F80B2 /* GatheredDataModel.swift in Sources */,
+				6576EBC12619CFE4005F922D /* ImageCollectionViewCell.swift in Sources */,
 				6576EBB52619C21E005F922D /* GatheredDetailsViewController.swift in Sources */,
 				65EA2E0E26173D60009F80B2 /* GatheredDataManager.swift in Sources */,
 				6586AA622617073600D3D0F8 /* AppDelegate.swift in Sources */,

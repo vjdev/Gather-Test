@@ -19,7 +19,7 @@ final class GatheredDataManager {
             let jsonData = try! String(contentsOfFile: path!).data(using: .utf8)!
             if let itemDetails = try? JSONDecoder().decode([ItemDetails].self, from: jsonData) {
                 var gatheredData = GatheredData()
-                gatheredData.imageName = fileName
+                gatheredData.imageName = "\(fileName).jpg"
                 gatheredData.itemDetails = itemDetails
                 gatheredDataArray.append(gatheredData)
             }

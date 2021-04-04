@@ -7,10 +7,11 @@
 
 import UIKit
 
-class GatheredDetailsViewController: UIViewController {
+final class GatheredDetailsViewController: UIViewController {
 
+    @IBOutlet private weak var imageview: UIImageView!
     private var gatheredData: GatheredData?
-
+    
     static func viewcontroller(gatheredData: GatheredData) -> GatheredDetailsViewController {
         let storyBoard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
         let viewcontroller = storyBoard.instantiateViewController(identifier: "\(GatheredDetailsViewController.self)") as! GatheredDetailsViewController
@@ -20,7 +21,13 @@ class GatheredDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupImageView()
     }
 
-
+    private func setupImageView() {
+        if let image = gatheredData?.imageName {
+            imageview.image = UIImage(named: image)
+        }
+    }
 }

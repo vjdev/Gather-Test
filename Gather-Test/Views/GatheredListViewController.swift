@@ -9,48 +9,58 @@ import UIKit
 
 final class GatheredListViewController: UIViewController {
 
-    @IBOutlet private weak var gatheredListTableview: UITableView!
-    private let cellIdentifier = "cell-identifier"
+    private let cellIdentifier = "ImageCollectionViewCell"
+    @IBOutlet private weak var gatheredListCollectionView: UICollectionView!
     private var gatheredDataArray: [GatheredData]? {
         didSet {
-            gatheredListTableview.reloadData()
+            gatheredListCollectionView.reloadData()
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupTableview()
+        setupCollectionView()
         gatheredDataArray = GatheredDataManager().getGatheredData()
     }
     
-    private func setupTableview() {
-        registerTableView()
-        gatheredListTableview.delegate = self
-        gatheredListTableview.dataSource = self
+    private func setupCollectionView() {
+        registerCollectionView()
+        gatheredListCollectionView.delegate = self
+        gatheredListCollectionView.dataSource = self
     }
     
-    private func registerTableView() {
-        gatheredListTableview.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+    private func registerCollectionView() {
+        let nib = UINib(nibName: "\(ImageCollectionViewCell.self)", bundle: nil)
+        gatheredListCollectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
     }
 }
 
-// MARK: - Tableview
-extension GatheredListViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+// MARK: - CollectionView
+extension GatheredListViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return gatheredDataArray?.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ImageCollectionViewCell
         let gatheredData = gatheredDataArray?[indexPath.row]
-        cell?.imageView?.image = UIImage(named: gatheredData?.imageName ?? Constants.placeholderImage)
-        return cell!
+        if let imageName = gatheredData?.imageName {
+            cell.configureCell(with: UIImage(named: imageName))
+        }
+        return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let selectedItem = gatheredDataArray?[indexPath.row] {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: false)
+        if let selectedItem = gatheredDataArray?[indexPath.row], let _ = selectedItem.imageName {
             let detailViewcontroller = GatheredDetailsViewController.viewcontroller(gatheredData: selectedItem)
             navigationController?.pushViewController(detailViewcontroller, animated: true)
         }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = UIScreen.main.bounds.width
+        let widthForItem = (width / 2) - 6
+        return CGSize(width: widthForItem, height: 130)
     }
 }
