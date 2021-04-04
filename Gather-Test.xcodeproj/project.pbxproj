@@ -56,6 +56,8 @@
 		65085F2326170B000064F777 /* img0008.json in Resources */ = {isa = PBXBuildFile; fileRef = 65085EF326170AFF0064F777 /* img0008.json */; };
 		65085F2426170B000064F777 /* img0003.json in Resources */ = {isa = PBXBuildFile; fileRef = 65085EF426170AFF0064F777 /* img0003.json */; };
 		6576EBAB2619B3B0005F922D /* GatheredDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576EBAA2619B3B0005F922D /* GatheredDataManagerTests.swift */; };
+		6576EBB02619C0EF005F922D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576EBAF2619C0EF005F922D /* Constants.swift */; };
+		6576EBB52619C21E005F922D /* GatheredDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576EBB42619C21E005F922D /* GatheredDetailsViewController.swift */; };
 		6586AA622617073600D3D0F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6586AA612617073600D3D0F8 /* AppDelegate.swift */; };
 		6586AA642617073600D3D0F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6586AA632617073600D3D0F8 /* SceneDelegate.swift */; };
 		6586AA662617073600D3D0F8 /* GatheredListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6586AA652617073600D3D0F8 /* GatheredListViewController.swift */; };
@@ -135,6 +137,8 @@
 		65085EF326170AFF0064F777 /* img0008.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = img0008.json; sourceTree = "<group>"; };
 		65085EF426170AFF0064F777 /* img0003.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = img0003.json; sourceTree = "<group>"; };
 		6576EBAA2619B3B0005F922D /* GatheredDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatheredDataManagerTests.swift; sourceTree = "<group>"; };
+		6576EBAF2619C0EF005F922D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6576EBB42619C21E005F922D /* GatheredDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatheredDetailsViewController.swift; sourceTree = "<group>"; };
 		6586AA5E2617073600D3D0F8 /* Gather-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gather-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6586AA612617073600D3D0F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6586AA632617073600D3D0F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -265,6 +269,7 @@
 				65085EBC26170A940064F777 /* GatheredData */,
 				65EA2DFC2617395B009F80B2 /* Views */,
 				65EA2DF826173917009F80B2 /* DataModels */,
+				6576EBAF2619C0EF005F922D /* Constants.swift */,
 			);
 			path = "Gather-Test";
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				6586AA652617073600D3D0F8 /* GatheredListViewController.swift */,
+				6576EBB42619C21E005F922D /* GatheredDetailsViewController.swift */,
 				6586AA672617073600D3D0F8 /* Main.storyboard */,
 			);
 			path = Views;
@@ -493,9 +499,11 @@
 			files = (
 				6586AA662617073600D3D0F8 /* GatheredListViewController.swift in Sources */,
 				65EA2DF4261737CB009F80B2 /* GatheredDataModel.swift in Sources */,
+				6576EBB52619C21E005F922D /* GatheredDetailsViewController.swift in Sources */,
 				65EA2E0E26173D60009F80B2 /* GatheredDataManager.swift in Sources */,
 				6586AA622617073600D3D0F8 /* AppDelegate.swift in Sources */,
 				6586AA642617073600D3D0F8 /* SceneDelegate.swift in Sources */,
+				6576EBB02619C0EF005F922D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
