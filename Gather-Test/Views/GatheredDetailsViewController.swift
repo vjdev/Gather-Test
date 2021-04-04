@@ -9,9 +9,9 @@ import UIKit
 
 class GatheredDetailsViewController: UIViewController {
 
-    private var gatheredData: ItemDetails?
+    private var gatheredData: GatheredData?
 
-    static func viewcontroller(gatheredData: ItemDetails) -> GatheredDetailsViewController {
+    static func viewcontroller(gatheredData: GatheredData) -> GatheredDetailsViewController {
         let storyBoard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
         let viewcontroller = storyBoard.instantiateViewController(identifier: "\(GatheredDetailsViewController.self)") as! GatheredDetailsViewController
         viewcontroller.gatheredData = gatheredData
