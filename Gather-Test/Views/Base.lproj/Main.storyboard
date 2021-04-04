@@ -39,6 +39,21 @@
             </objects>
             <point key="canvasLocation" x="-219" y="126"/>
         </scene>
+        <!--Gathered Details View Controller-->
+        <scene sceneID="tv2-xM-noh">
+            <objects>
+                <viewController storyboardIdentifier="GatheredDetailsViewController" id="wQH-JB-pSu" customClass="GatheredDetailsViewController" customModule="Gather_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0nP-NS-fX2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dmX-ze-XiU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aeA-SS-HFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599" y="126"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="8o1-lb-PFH">
             <objects>
