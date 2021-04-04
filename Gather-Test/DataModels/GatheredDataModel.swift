@@ -8,6 +8,11 @@
 import Foundation
 
 struct GatheredData: Codable {
+    var imageName: String?
+    var itemDetails: [ItemDetails]?
+}
+
+struct ItemDetails: Codable {
     var className: ClassName?
     var score: Double?
     var imageSize: [Int]?
