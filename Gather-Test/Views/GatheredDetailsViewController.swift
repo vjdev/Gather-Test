@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreGraphics
 
 final class GatheredDetailsViewController: UIViewController {
 
@@ -23,6 +24,7 @@ final class GatheredDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         setupImageView()
+        drawRectangle()
     }
 
     private func setupImageView() {
@@ -30,4 +32,24 @@ final class GatheredDetailsViewController: UIViewController {
             imageview.image = UIImage(named: image)
         }
     }
+    
+    func drawRectangle() {
+        let path = UIBezierPath()
+               path.move(to: CGPoint(x: 50, y: 50))
+        
+               path.addLine(to: CGPoint(x: 300, y: 50))
+               path.addLine(to: CGPoint(x: 300, y: 300))
+               path.addLine(to: CGPoint(x: 50, y: 300))
+        
+               path.addLine(to: CGPoint(x: 50, y: 50))
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = path.cgPath
+        shapeLayer.strokeColor = UIColor.red.cgColor
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.lineWidth = 4
+        imageview.layer.insertSublayer(shapeLayer, above: imageview.layer)
+    }
+        
 }
+
