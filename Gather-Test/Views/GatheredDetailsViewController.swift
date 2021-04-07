@@ -12,6 +12,7 @@ final class GatheredDetailsViewController: UIViewController {
 
     @IBOutlet private weak var imageview: UIImageView!
     private var gatheredData: GatheredData?
+    var boxRectangleLayer: CAShapeLayer!
     
     static func viewcontroller(gatheredData: GatheredData) -> GatheredDetailsViewController {
         let storyBoard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
@@ -25,6 +26,7 @@ final class GatheredDetailsViewController: UIViewController {
         
         setupImageView()
         drawRectangle()
+        addToggleButton()
     }
 
     private func setupImageView() {
@@ -33,22 +35,36 @@ final class GatheredDetailsViewController: UIViewController {
         }
     }
     
-    func drawRectangle() {
+    private func addToggleButton() {
+        let toggleButton = UISwitch(frame: .zero)
+        toggleButton.addTarget(self, action: #selector(self.switchValueDidChange), for: .valueChanged)
+        toggleButton.isOn = true
+        self.navigationItem.setRightBarButton(UIBarButtonItem(customView: toggleButton), animated: true)
+    }
+
+    @IBAction func switchValueDidChange(_ sender: Any) {
+        guard  let toggleButton = sender as? UISwitch else {
+            return
+        }
+        boxRectangleLayer.isHidden = !toggleButton.isOn
+    }
+
+    
+    private func drawRectangle() {
         let path = UIBezierPath()
-               path.move(to: CGPoint(x: 50, y: 50))
+        path.move(to: CGPoint(x: 50, y: 50))
         
-               path.addLine(to: CGPoint(x: 300, y: 50))
-               path.addLine(to: CGPoint(x: 300, y: 300))
-               path.addLine(to: CGPoint(x: 50, y: 300))
+        path.addLine(to: CGPoint(x: 300, y: 50))
+        path.addLine(to: CGPoint(x: 300, y: 300))
+        path.addLine(to: CGPoint(x: 50, y: 300))
+        path.addLine(to: CGPoint(x: 50, y: 50))
         
-               path.addLine(to: CGPoint(x: 50, y: 50))
-        
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.path = path.cgPath
-        shapeLayer.strokeColor = UIColor.red.cgColor
-        shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.lineWidth = 4
-        imageview.layer.insertSublayer(shapeLayer, above: imageview.layer)
+        boxRectangleLayer = CAShapeLayer()
+        boxRectangleLayer.path = path.cgPath
+        boxRectangleLayer.strokeColor = UIColor.red.cgColor
+        boxRectangleLayer.fillColor = UIColor.clear.cgColor
+        boxRectangleLayer.lineWidth = 4
+        imageview.layer.insertSublayer(boxRectangleLayer, above: imageview.layer)
     }
         
 }
