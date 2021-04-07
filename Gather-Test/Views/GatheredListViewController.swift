@@ -31,7 +31,8 @@ final class GatheredListViewController: UIViewController {
     
     @objc
     private func viewSummaryButtonClicked() {
-        
+        let summaryVC = SummaryViewController.viewController()
+        navigationController?.pushViewController(summaryVC, animated: true)
     }
     
     private func setupCollectionView() {

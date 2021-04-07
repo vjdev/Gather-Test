@@ -70,6 +70,7 @@
 		6586AA842617073700D3D0F8 /* Gather_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6586AA832617073700D3D0F8 /* Gather_TestUITests.swift */; };
 		65EA2DF4261737CB009F80B2 /* GatheredDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EA2DF3261737CB009F80B2 /* GatheredDataModel.swift */; };
 		65EA2E0E26173D60009F80B2 /* GatheredDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EA2E0D26173D60009F80B2 /* GatheredDataManager.swift */; };
+		65F27B41261E000E00049A4E /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F27B40261E000E00049A4E /* SummaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +160,7 @@
 		6586AA852617073700D3D0F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65EA2DF3261737CB009F80B2 /* GatheredDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatheredDataModel.swift; sourceTree = "<group>"; };
 		65EA2E0D26173D60009F80B2 /* GatheredDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatheredDataManager.swift; sourceTree = "<group>"; };
+		65F27B40261E000E00049A4E /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +312,7 @@
 			children = (
 				6586AA652617073600D3D0F8 /* GatheredListViewController.swift */,
 				6576EBB42619C21E005F922D /* GatheredDetailsViewController.swift */,
+				65F27B40261E000E00049A4E /* SummaryViewController.swift */,
 				6576EBBF2619CFE4005F922D /* ImageCollectionViewCell.swift */,
 				6576EBC02619CFE4005F922D /* ImageCollectionViewCell.xib */,
 				6586AA672617073600D3D0F8 /* Main.storyboard */,
@@ -512,6 +515,7 @@
 				6586AA622617073600D3D0F8 /* AppDelegate.swift in Sources */,
 				6586AA642617073600D3D0F8 /* SceneDelegate.swift in Sources */,
 				6576EBB02619C0EF005F922D /* Constants.swift in Sources */,
+				65F27B41261E000E00049A4E /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
