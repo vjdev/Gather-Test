@@ -19,8 +19,19 @@ final class GatheredListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addNavigationBarButtons()
         setupCollectionView()
         gatheredDataArray = GatheredDataManager().getGatheredData()
+    }
+    
+    private func addNavigationBarButtons() {
+        let viewSummary = UIBarButtonItem(title: "View Summary", style: .plain, target: self, action: #selector(viewSummaryButtonClicked))
+        navigationItem.rightBarButtonItem = viewSummary
+    }
+    
+    @objc
+    private func viewSummaryButtonClicked() {
+        
     }
     
     private func setupCollectionView() {
