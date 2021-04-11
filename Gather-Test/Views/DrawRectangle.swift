@@ -39,14 +39,18 @@ final class DrawRectangle {
                 
                 let rectangle = CGRect(x: originX, y: originY, width: calculatedWidth, height: calculatedHeight)
                 
-                let borderView = UIView(frame: rectangle)
-                borderView.layer.borderColor = color.cgColor
-                borderView.frame = borderView.frame.insetBy(dx: -rectangleBorderWidth, dy: -rectangleBorderWidth);
-                borderView.layer.borderWidth  = rectangleBorderWidth
-                borderView.backgroundColor = .clear
-                
-                view.addSubview(borderView)
+                draw(rectangle, color, view)
             }
         }
+    }
+    
+    private func draw(_ rectangle: CGRect, _ color: UIColor, _ view: UIView) {
+        let borderView = UIView(frame: rectangle)
+        borderView.layer.borderColor = color.cgColor
+        borderView.frame = borderView.frame.insetBy(dx: -rectangleBorderWidth, dy: -rectangleBorderWidth);
+        borderView.layer.borderWidth  = rectangleBorderWidth
+        borderView.backgroundColor = .clear
+        
+        view.addSubview(borderView)
     }
 }
