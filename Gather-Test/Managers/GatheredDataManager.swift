@@ -8,9 +8,14 @@
 import Foundation
 
 final class GatheredDataManager {
+
+    static let sharedInstance = GatheredDataManager()
+    private init() {}
     
     private let totalFiles = 24
+    private var itemDetailsSummary = [ItemDetails]()
     
+    @discardableResult
     func getGatheredData() -> [GatheredData]? {
         var gatheredDataArray = [GatheredData]()
         for fileIndex in 0..<totalFiles {
@@ -22,9 +27,14 @@ final class GatheredDataManager {
                 gatheredData.imageName = "\(fileName).jpg"
                 gatheredData.itemDetails = itemDetails
                 gatheredDataArray.append(gatheredData)
+                itemDetailsSummary.append(contentsOf: itemDetails)
             }
         }
         return gatheredDataArray
+    }
+    
+    func getGatheredItemSummary() -> [ItemDetails]? {
+        itemDetailsSummary.filter { $0.className?.rawValue == "barcode" && $0.code != "NA" }
     }
     
     func getFileName(index: Int) -> String {
