@@ -21,7 +21,7 @@ final class GatheredListViewController: UIViewController {
         
         addNavigationBarButtons()
         setupCollectionView()
-        gatheredDataArray = GatheredDataManager().getGatheredData()
+        gatheredDataArray = GatheredDataManager.sharedInstance.getGatheredData()
     }
     
     private func addNavigationBarButtons() {
