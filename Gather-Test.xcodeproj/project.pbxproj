@@ -56,6 +56,7 @@
 		65085F2326170B000064F777 /* img0008.json in Resources */ = {isa = PBXBuildFile; fileRef = 65085EF326170AFF0064F777 /* img0008.json */; };
 		65085F2426170B000064F777 /* img0003.json in Resources */ = {isa = PBXBuildFile; fileRef = 65085EF426170AFF0064F777 /* img0003.json */; };
 		651683BC2623566D00220B09 /* SummartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651683BB2623566D00220B09 /* SummartModel.swift */; };
+		651683C1262358E900220B09 /* DrawRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651683C0262358E900220B09 /* DrawRectangle.swift */; };
 		655739342621D5CB008AD45D /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655739322621D5CB008AD45D /* SummaryTableViewCell.swift */; };
 		655739352621D5CB008AD45D /* SummaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 655739332621D5CB008AD45D /* SummaryTableViewCell.xib */; };
 		655FDB0026235249007FEA42 /* GatheredListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655FDAFF26235249007FEA42 /* GatheredListDataSource.swift */; };
@@ -144,6 +145,7 @@
 		65085EF326170AFF0064F777 /* img0008.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = img0008.json; sourceTree = "<group>"; };
 		65085EF426170AFF0064F777 /* img0003.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = img0003.json; sourceTree = "<group>"; };
 		651683BB2623566D00220B09 /* SummartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummartModel.swift; sourceTree = "<group>"; };
+		651683C0262358E900220B09 /* DrawRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawRectangle.swift; sourceTree = "<group>"; };
 		655739322621D5CB008AD45D /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
 		655739332621D5CB008AD45D /* SummaryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryTableViewCell.xib; sourceTree = "<group>"; };
 		655FDAFF26235249007FEA42 /* GatheredListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatheredListDataSource.swift; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 				6586AA652617073600D3D0F8 /* GatheredListViewController.swift */,
 				655FDAFF26235249007FEA42 /* GatheredListDataSource.swift */,
 				6576EBB42619C21E005F922D /* GatheredDetailsViewController.swift */,
+				651683C0262358E900220B09 /* DrawRectangle.swift */,
 				65F27B40261E000E00049A4E /* SummaryViewController.swift */,
 				655739322621D5CB008AD45D /* SummaryTableViewCell.swift */,
 				655739332621D5CB008AD45D /* SummaryTableViewCell.xib */,
@@ -526,6 +529,7 @@
 				655FDB0026235249007FEA42 /* GatheredListDataSource.swift in Sources */,
 				6576EBB52619C21E005F922D /* GatheredDetailsViewController.swift in Sources */,
 				65EA2E0E26173D60009F80B2 /* GatheredDataManager.swift in Sources */,
+				651683C1262358E900220B09 /* DrawRectangle.swift in Sources */,
 				6586AA622617073600D3D0F8 /* AppDelegate.swift in Sources */,
 				6586AA642617073600D3D0F8 /* SceneDelegate.swift in Sources */,
 				6576EBB02619C0EF005F922D /* Constants.swift in Sources */,

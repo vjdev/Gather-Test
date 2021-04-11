@@ -54,33 +54,12 @@ final class GatheredDetailsViewController: UIViewController {
     }
 
     private func addRectangles() {
-        guard let gatheredData = gatheredData, let itemDetails = gatheredData.itemDetails else {
+        guard let gatheredData = gatheredData else {
             return
         }
         
-        for items in itemDetails {
-            let color: UIColor = items.className?.rawValue == "barcode" ? .yellow : .magenta
-            
-            let imageWidth = Double(imageview.frame.size.width)
-            let imageHeight = Double(imageview.frame.size.height)
-            
-            
-            if let originXFromData: Double = items.rect?[0][0],
-               let originYFromData: Double = (items.rect?[0][1]),
-               let itemWidth: Double = items.rect?[1][0],
-               let itemHeight: Double = items.rect?[1][1] {
-                
-                let calculatedHeight = itemHeight * imageHeight
-                let calculatedWidth: Double = itemWidth * imageWidth
-                
-                var originY = ((originYFromData * imageHeight) + navigationBarHeight)
-                let originX: Double = originXFromData * imageWidth
-                originY += calculatedHeight
-                
-                let rectangle = CGRect(x: originX, y: originY, width: calculatedWidth, height: calculatedHeight)
-                addBorderView(rectangle, color)
-            }
-        }
+        let drawRectangle = DrawRectangle(gatheredData: gatheredData)
+        drawRectangle.drawRectangles(on: rectangleView)
     }
     
     private func addBorderView(_ rectangle: CGRect, _ color: UIColor) {
