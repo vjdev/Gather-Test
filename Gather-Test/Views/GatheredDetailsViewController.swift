@@ -70,11 +70,14 @@ final class GatheredDetailsViewController: UIViewController {
                let itemHeight: Double = items.rect?[1][1] {
                 
                 let calculatedHeight = itemHeight * imageHeight
+                let calculatedWidth: Double = itemWidth * imageWidth
+                
                 var originY = ((originYFromData * imageHeight) + navigationBarHeight)
+                let originX: Double = originXFromData * imageWidth
                 originY += calculatedHeight
                 
-                let rectangle = CGRect(x: originXFromData * imageWidth, y: originY, width: itemWidth * imageWidth, height: calculatedHeight)
-                print("***************************************************")
+                let rectangle = CGRect(x: originX, y: originY, width: calculatedWidth, height: calculatedHeight)
+                print("rectangle:",rectangle)
                 print("rectangle:",rectangle)
                 print("item:",items)
                 addBorderView(rectangle, color)
