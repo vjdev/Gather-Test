@@ -15,7 +15,7 @@ struct GatheredData: Codable {
 struct ItemDetails: Codable {
     var className: ClassName?
     var score: Double?
-    var imageSize: [Int]?
+    var imageSize: [Double]?
     var rect: [[Double]]?
     var code: String?
 

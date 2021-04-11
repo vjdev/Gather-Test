@@ -65,8 +65,8 @@ extension GatheredListViewController: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: false)
         if let selectedItem = gatheredDataArray?[indexPath.row], let _ = selectedItem.imageName {
-            let detailViewcontroller = GatheredDetailsViewController.viewcontroller(gatheredData: selectedItem)
-            navigationController?.pushViewController(detailViewcontroller, animated: true)
+            let detailViewController = GatheredDetailsViewController.viewController(gatheredData: selectedItem)
+            navigationController?.pushViewController(detailViewController, animated: true)
         }
     }
 
