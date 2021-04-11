@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GatheredListDataSource: NSObject, UICollectionViewDataSource {
+final class GatheredListDataSource: NSObject, UICollectionViewDataSource {
     
     private let cellIdentifier = "ImageCollectionViewCell"
     var gatheredDataArray: [GatheredData]? 

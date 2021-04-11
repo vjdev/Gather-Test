@@ -12,8 +12,11 @@ final class SummaryViewController: UIViewController {
     @IBOutlet weak var summaryTableView: UITableView!
     
     let cellIdentifier = "SummaryTableViewCell"
-    var summary = Dictionary<String?, Int>()
-    var summaryItemCodes = [String?]()
+    var gatheredSummary: GatheredSummary? {
+        didSet {
+            summaryTableView.reloadData()
+        }
+    }
     
     static func viewController() -> SummaryViewController {
         let storyBoard  = UIStoryboard.init(name: "Main", bundle: Bundle.main)
@@ -40,28 +43,18 @@ final class SummaryViewController: UIViewController {
     }
     
     private func displaySummaryDetails() {
-        guard let summaryArray = GatheredDataManager.sharedInstance.getGatheredItemSummary() else {
-            return
-        }
-        
-        for item in summaryArray {
-            summaryItemCodes.append(item.code)
-        }
-
-        let mappedItems = summaryItemCodes.map { ($0, 1) }
-        summary = Dictionary(mappedItems, uniquingKeysWith: +)
-        summaryTableView.reloadData()
+        gatheredSummary = GatheredDataManager.sharedInstance.getSummary()
     }
 }
 
 extension SummaryViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return summary.count
+        return gatheredSummary?.summary.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! SummaryTableViewCell
-        if let code = summaryItemCodes[indexPath.row], let count = summary[code] {
+        if let code = gatheredSummary?.summaryItemCodes?[indexPath.row], let count = gatheredSummary?.summary[code] {
             cell.configureWith(code: code, count: count)
         }
         cell.selectionStyle = .none

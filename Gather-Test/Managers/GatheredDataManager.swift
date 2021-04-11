@@ -43,7 +43,22 @@ final class GatheredDataManager {
         }
         return "img00\(index)"
     }
+    
+    func getSummary() -> GatheredSummary? {
+        var summary = Dictionary<String?, Int>()
+        var summaryItemCodes = [String?]()
+        
+        guard let summaryArray = GatheredDataManager.sharedInstance.getGatheredItemSummary() else {
+            return nil
+        }
+        
+        for item in summaryArray {
+            summaryItemCodes.append(item.code)
+        }
+
+        let mappedItems = summaryItemCodes.map { ($0, 1) }
+        summary = Dictionary(mappedItems, uniquingKeysWith: +)
+        return GatheredSummary(summary: summary, summaryItemCodes: summaryItemCodes)
+    }
 }
-
-
 
