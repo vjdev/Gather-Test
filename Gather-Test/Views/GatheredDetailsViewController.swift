@@ -11,6 +11,7 @@ import CoreGraphics
 final class GatheredDetailsViewController: UIViewController {
 
     @IBOutlet private weak var imageview: UIImageView!
+    @IBOutlet weak var rectangleView: UIView!
     private var gatheredData: GatheredData?
     var rectangleLayers = CAShapeLayer()
     
@@ -49,7 +50,7 @@ final class GatheredDetailsViewController: UIViewController {
         guard  let toggleButton = sender as? UISwitch else {
             return
         }
-        rectangleLayers.isHidden = !toggleButton.isOn
+        rectangleView.isHidden = !toggleButton.isOn
     }
 
     private func addRectangles() {
@@ -88,7 +89,7 @@ final class GatheredDetailsViewController: UIViewController {
         borderView.frame = borderView.frame.insetBy(dx: -rectangleBorderWidth, dy: -rectangleBorderWidth);
         borderView.layer.borderWidth  = rectangleBorderWidth
         borderView.backgroundColor = .clear
-        imageview.addSubview(borderView)
+        rectangleView.addSubview(borderView)
     }
 }
 

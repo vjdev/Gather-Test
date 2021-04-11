@@ -60,23 +60,33 @@
                                     <constraint firstAttribute="width" secondItem="LHo-Om-Fl5" secondAttribute="height" multiplier="1000:750" id="9Eh-2r-4GM"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ed-CX-Q04">
+                                <rect key="frame" x="0.0" y="88" width="428" height="321"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dmX-ze-XiU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="LHo-Om-Fl5" secondAttribute="trailing" id="1LQ-3H-Suy"/>
+                            <constraint firstItem="9ed-CX-Q04" firstAttribute="trailing" secondItem="dmX-ze-XiU" secondAttribute="trailing" id="6up-uP-pbr"/>
+                            <constraint firstItem="9ed-CX-Q04" firstAttribute="leading" secondItem="dmX-ze-XiU" secondAttribute="leading" id="A51-ha-67w"/>
+                            <constraint firstItem="9ed-CX-Q04" firstAttribute="width" secondItem="LHo-Om-Fl5" secondAttribute="width" id="EZw-Xd-3JS"/>
                             <constraint firstItem="LHo-Om-Fl5" firstAttribute="top" secondItem="dmX-ze-XiU" secondAttribute="top" id="EgG-t3-pwc"/>
+                            <constraint firstItem="9ed-CX-Q04" firstAttribute="height" secondItem="LHo-Om-Fl5" secondAttribute="height" id="OaX-Rw-HkN"/>
                             <constraint firstItem="LHo-Om-Fl5" firstAttribute="leading" secondItem="dmX-ze-XiU" secondAttribute="leading" id="Qqn-dL-RsH"/>
+                            <constraint firstItem="9ed-CX-Q04" firstAttribute="top" secondItem="dmX-ze-XiU" secondAttribute="top" id="QzV-sL-XCS"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="imageview" destination="LHo-Om-Fl5" id="RRq-GU-3if"/>
+                        <outlet property="rectangleView" destination="9ed-CX-Q04" id="zFV-RL-yJt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aeA-SS-HFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="599" y="126"/>
+            <point key="canvasLocation" x="598.59813084112147" y="125.70194384449245"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8o1-lb-PFH">

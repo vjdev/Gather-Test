@@ -47,6 +47,7 @@ final class SummaryViewController: UIViewController {
     }
 }
 
+// MARK: - Tableview
 extension SummaryViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gatheredSummary?.summary.count ?? 0
