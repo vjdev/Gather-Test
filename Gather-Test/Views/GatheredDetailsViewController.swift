@@ -77,9 +77,6 @@ final class GatheredDetailsViewController: UIViewController {
                 originY += calculatedHeight
                 
                 let rectangle = CGRect(x: originX, y: originY, width: calculatedWidth, height: calculatedHeight)
-                print("rectangle:",rectangle)
-                print("rectangle:",rectangle)
-                print("item:",items)
                 addBorderView(rectangle, color)
             }
         }
