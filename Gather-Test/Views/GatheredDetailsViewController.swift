@@ -30,7 +30,7 @@ final class GatheredDetailsViewController: UIViewController {
         
         setupImageView()
         addToggleButton()
-        addRectangles()
+        drawRectangles()
     }
 
     private func setupImageView() {
@@ -53,7 +53,7 @@ final class GatheredDetailsViewController: UIViewController {
         rectangleView.isHidden = !toggleButton.isOn
     }
 
-    private func addRectangles() {
+    private func drawRectangles() {
         guard let gatheredData = gatheredData else {
             return
         }
