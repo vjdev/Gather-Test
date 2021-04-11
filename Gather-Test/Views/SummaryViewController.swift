@@ -64,6 +64,7 @@ extension SummaryViewController: UITableViewDataSource, UITableViewDelegate {
         if let code = summaryItemCodes[indexPath.row], let count = summary[code] {
             cell.configureWith(code: code, count: count)
         }
+        cell.selectionStyle = .none
         return cell
     }
 }
