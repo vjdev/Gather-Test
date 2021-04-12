@@ -62,6 +62,6 @@ final class GatheredDetailsViewController: UIViewController {
             return
         }
         let drawRectangle = DrawRectangle(gatheredData: gatheredData)
-        drawRectangle.drawRectangles(on: rectangleView)
+        drawRectangle.drawRectangles(on: imageview)
     }
 }

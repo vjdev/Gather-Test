@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct GatheredData: Codable {
     var imageName: String?
@@ -13,19 +14,27 @@ struct GatheredData: Codable {
 }
 
 struct ItemDetails: Codable {
-    var className: ClassName?
-    var score: Double?
-    var imageSize: [Double]?
-    var rect: [[Double]]?
-    var code: String?
-
-    enum CodingKeys: String, CodingKey {
-        case className = "className"
-        case score = "score"
-        case imageSize = "imgSize"
-        case rect = "rect"
-        case code = "code"
+    var itemColor: UIColor {
+        return className?.rawValue == "barcode" ? .yellow : .magenta
     }
+    var rectange: CGRect {
+        if let originX = rect?[0][0],
+           let originY = (rect?[0][1]),
+           let width = rect?[1][0],
+           let height = rect?[1][1],
+           let imageWidth = imgSize?[0],
+           let imageHeight = imgSize?[1]{
+            return CGRect(x: originX * imageWidth, y: originY * imageHeight, width:  width * imageWidth, height: height * imageHeight)
+        }
+        return .zero
+    }
+    
+    var className: ClassName?
+    var code: String?
+    private var score: Double?
+    private var imgSize: [Double]?
+    private var rect: [[Double]]?
+    
 }
 
 enum ClassName: String, Codable {
