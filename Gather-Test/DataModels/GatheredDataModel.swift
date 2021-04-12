@@ -14,8 +14,8 @@ struct GatheredData: Codable {
 }
 
 struct ItemDetails: Codable {
-    var itemColor: UIColor {
-        return className == "barcode" ? .yellow : .magenta
+    var rectangleColor: UIColor {
+        return className == "barcode" ? Constants.barCodeRectangleColor : Constants.boxRectangleColor
     }
     var rectange: CGRect {
         if let originX = rect?[0][0],

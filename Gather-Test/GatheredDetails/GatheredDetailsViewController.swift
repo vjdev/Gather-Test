@@ -11,9 +11,8 @@ import CoreGraphics
 final class GatheredDetailsViewController: UIViewController {
 
     @IBOutlet private weak var imageview: UIImageView!
-    @IBOutlet weak var rectangleView: UIView!
     private var gatheredData: GatheredData?
-    var rectangleLayers = CAShapeLayer()
+    @IBOutlet weak var imageViewWithRectangles: UIImageView!
     
     private let navigationBarHeight = 50.0
     private let rectangleBorderWidth: CGFloat = 2.0
@@ -40,6 +39,7 @@ final class GatheredDetailsViewController: UIViewController {
     private func setupImageView() {
         if let image = gatheredData?.imageName {
             imageview.image = UIImage(named: image)
+            imageViewWithRectangles.image = UIImage(named: image)
         }
     }
     
@@ -54,7 +54,7 @@ final class GatheredDetailsViewController: UIViewController {
         guard  let toggleButton = sender as? UISwitch else {
             return
         }
-        rectangleView.isHidden = !toggleButton.isOn
+        imageViewWithRectangles.isHidden = !toggleButton.isOn
     }
 
     private func drawRectangles() {
@@ -62,6 +62,6 @@ final class GatheredDetailsViewController: UIViewController {
             return
         }
         let drawRectangle = DrawRectangle(gatheredData: gatheredData)
-        drawRectangle.drawRectangles(on: imageview)
+        drawRectangle.drawRectangles(on: imageViewWithRectangles)
     }
 }

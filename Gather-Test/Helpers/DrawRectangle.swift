@@ -21,7 +21,7 @@ final class DrawRectangle {
         }
         
         for items in itemDetails {
-            let color: UIColor = items.itemColor
+            let color: UIColor = items.rectangleColor
             let originXFromData: Double = Double(items.rectange.origin.x)
             let originYFromData: Double = Double(items.rectange.origin.y)
             let itemWidth: Double = Double(items.rectange.size.width)
@@ -30,8 +30,8 @@ final class DrawRectangle {
             
             let rect = CGRect(x: originXFromData, y: originYFromData, width: itemWidth, height: itemHeight)
             let convertedRect = view.convertRect(fromImageRect: rect)
-            let result = CGRect(x: convertedRect.origin.x, y: view.frame.height - convertedRect.origin.y - convertedRect.height , width: convertedRect.width, height: convertedRect.height)
-            draw(result, color, view)
+            let finalRect = CGRect(x: convertedRect.origin.x, y: view.frame.height - convertedRect.origin.y - convertedRect.height , width: convertedRect.width, height: convertedRect.height)
+            draw(finalRect, color, view)
         }
     }
     
