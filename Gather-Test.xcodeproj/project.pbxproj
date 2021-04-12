@@ -332,21 +332,21 @@
 		6586AA602617073600D3D0F8 /* Gather-Test */ = {
 			isa = PBXGroup;
 			children = (
-				6586AA6F2617073700D3D0F8 /* Info.plist */,
 				6586AA612617073600D3D0F8 /* AppDelegate.swift */,
 				6586AA632617073600D3D0F8 /* SceneDelegate.swift */,
-				6586AA6A2617073700D3D0F8 /* Assets.xcassets */,
-				651604AB26243E1A001D7566 /* Extensions */,
-				651683F62624220700220B09 /* Constants */,
-				65EA2DF826173917009F80B2 /* DataModels */,
-				65085EBC26170A940064F777 /* GatheredData */,
 				651683F2262421E400220B09 /* GatheredDetails */,
 				651683EC2624219800220B09 /* GatheredList */,
 				651683F0262421B100220B09 /* GatheredSummary */,
+				65EA2E0C26173D4F009F80B2 /* Managers */,
 				651683F1262421CF00220B09 /* Helpers */,
+				651683F62624220700220B09 /* Constants */,
+				65EA2DF826173917009F80B2 /* DataModels */,
+				651604AB26243E1A001D7566 /* Extensions */,
+				65085EBC26170A940064F777 /* GatheredData */,
+				6586AA6F2617073700D3D0F8 /* Info.plist */,
 				6586AA6C2617073700D3D0F8 /* LaunchScreen.storyboard */,
 				6586AA672617073600D3D0F8 /* Main.storyboard */,
-				65EA2E0C26173D4F009F80B2 /* Managers */,
+				6586AA6A2617073700D3D0F8 /* Assets.xcassets */,
 			);
 			path = "Gather-Test";
 			sourceTree = "<group>";
