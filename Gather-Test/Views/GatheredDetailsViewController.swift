@@ -34,12 +34,9 @@ final class GatheredDetailsViewController: UIViewController {
     
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
         drawRectangles()
-        //view.layoutIfNeeded()
     }
     
-
     private func setupImageView() {
         if let image = gatheredData?.imageName {
             imageview.image = UIImage(named: image)
@@ -64,11 +61,8 @@ final class GatheredDetailsViewController: UIViewController {
         guard let gatheredData = gatheredData else {
             return
         }
-        
-//        rectangleView.translatesAutoresizingMaskIntoConstraints = false
-//        imageview.translatesAutoresizingMaskIntoConstraints = false
         let drawRectangle = DrawRectangle(gatheredData: gatheredData)
-        drawRectangle.drawRectangles(on: recta)
+        drawRectangle.drawRectangles(on: rectangleView)
     }
 }
 
