@@ -65,4 +65,3 @@ final class GatheredDetailsViewController: UIViewController {
         drawRectangle.drawRectangles(on: rectangleView)
     }
 }
-

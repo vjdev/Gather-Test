@@ -9,7 +9,6 @@ import UIKit
 
 final class GatheredListViewController: UIViewController {
 
-    
     @IBOutlet private weak var gatheredListCollectionView: UICollectionView!
     
     private let cellIdentifier = "ImageCollectionViewCell"

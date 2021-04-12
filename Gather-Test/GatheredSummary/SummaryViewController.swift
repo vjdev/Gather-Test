@@ -62,4 +62,3 @@ extension SummaryViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 }
-
