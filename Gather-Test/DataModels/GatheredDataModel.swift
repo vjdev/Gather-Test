@@ -23,12 +23,12 @@ struct ItemDetails: Codable {
            let width = rect?[1][0],
            let height = rect?[1][1],
            let imageWidth = imgSize?[0],
-           let imageHeight = imgSize?[1]{
-            return CGRect(x: originX * imageWidth, y: originY * imageHeight, width:  width * imageWidth, height: height * imageHeight)
+           let imageHeight = imgSize?[1] {
+            return CGRect(x: originX * imageWidth, y: originY * imageHeight, width: width * imageWidth, height: height * imageHeight)
         }
         return .zero
     }
-    
+
     var isCodeAvailable: Bool {
         return code != "NA"
     }

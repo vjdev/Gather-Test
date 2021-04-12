@@ -10,38 +10,38 @@ import UIKit
 final class SummaryViewController: UIViewController {
 
     @IBOutlet weak var summaryTableView: UITableView!
-    
-    let cellIdentifier = "SummaryTableViewCell"
-    var gatheredSummary: GatheredSummary? {
+
+    private let cellIdentifier = "SummaryTableViewCell"
+    private var gatheredSummary: GatheredSummary? {
         didSet {
             summaryTableView.reloadData()
         }
     }
-    
+
     static func viewController() -> SummaryViewController {
-        let storyBoard  = UIStoryboard.init(name: "Main", bundle: Bundle.main)
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
         let viewController = storyBoard.instantiateViewController(identifier: "\(SummaryViewController.self)") as! SummaryViewController
         return viewController
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupTableView()
         registerTableView()
         displaySummaryDetails()
     }
-    
+
     private func setupTableView() {
         summaryTableView.dataSource = self
         summaryTableView.delegate = self
     }
-    
+
     private func registerTableView() {
         let nib = UINib(nibName: "\(SummaryTableViewCell.self)", bundle: nil)
         summaryTableView.register(nib, forCellReuseIdentifier: cellIdentifier)
     }
-    
+
     private func displaySummaryDetails() {
         gatheredSummary = GatheredDataManager.sharedInstance.getSummary()
     }
@@ -52,7 +52,7 @@ extension SummaryViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gatheredSummary?.summary.count ?? 0
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! SummaryTableViewCell
         if let code = gatheredSummary?.summaryItemCodes?[indexPath.row], let count = gatheredSummary?.summary[code] {

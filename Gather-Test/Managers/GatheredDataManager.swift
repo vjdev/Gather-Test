@@ -10,11 +10,13 @@ import Foundation
 final class GatheredDataManager {
 
     static let sharedInstance = GatheredDataManager()
-    private init() {}
-    
+
+    private init() {
+    }
+
     private let totalFiles = 24
     private var itemDetailsSummary = [ItemDetails]()
-    
+
     @discardableResult
     func getGatheredData() -> [GatheredData]? {
         var gatheredDataArray = [GatheredData]()
@@ -32,18 +34,18 @@ final class GatheredDataManager {
         }
         return gatheredDataArray
     }
-    
+
     func getGatheredItemSummary() -> [ItemDetails]? {
         itemDetailsSummary.filter { $0.isBarCode && $0.isCodeAvailable }
     }
-    
+
     func getFileName(index: Int) -> String {
         if index < 10 {
             return "img000\(index)"
         }
         return "img00\(index)"
     }
-    
+
     func getSummary() -> GatheredSummary? {
         var summary = Dictionary<String?, Int>()
         var summaryItemCodes = [String?]()
