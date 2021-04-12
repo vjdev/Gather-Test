@@ -34,7 +34,7 @@ final class GatheredDataManager {
     }
     
     func getGatheredItemSummary() -> [ItemDetails]? {
-        itemDetailsSummary.filter { $0.className?.rawValue == "barcode" && $0.code != "NA" }
+        itemDetailsSummary.filter { $0.isBarCode && $0.isCodeAvailable }
     }
     
     func getFileName(index: Int) -> String {

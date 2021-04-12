@@ -15,7 +15,7 @@ struct GatheredData: Codable {
 
 struct ItemDetails: Codable {
     var itemColor: UIColor {
-        return className?.rawValue == "barcode" ? .yellow : .magenta
+        return className == "barcode" ? .yellow : .magenta
     }
     var rectange: CGRect {
         if let originX = rect?[0][0],
@@ -29,17 +29,18 @@ struct ItemDetails: Codable {
         return .zero
     }
     
-    var className: ClassName?
+    var isCodeAvailable: Bool {
+        return code != "NA"
+    }
+    var isBarCode: Bool {
+        return className == "barcode"
+    }
     var code: String?
+    var className: String?
     private var score: Double?
     private var imgSize: [Double]?
     private var rect: [[Double]]?
-    
 }
 
-enum ClassName: String, Codable {
-    case barcode = "barcode"
-    case box = "box"
-}
 
 
