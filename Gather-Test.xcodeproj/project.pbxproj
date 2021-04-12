@@ -253,6 +253,52 @@
 			path = GatheredData;
 			sourceTree = "<group>";
 		};
+		651683EC2624219800220B09 /* GatheredList */ = {
+			isa = PBXGroup;
+			children = (
+				6586AA652617073600D3D0F8 /* GatheredListViewController.swift */,
+				655FDAFF26235249007FEA42 /* GatheredListDataSource.swift */,
+				6576EBBF2619CFE4005F922D /* ImageCollectionViewCell.swift */,
+				6576EBC02619CFE4005F922D /* ImageCollectionViewCell.xib */,
+			);
+			name = GatheredList;
+			path = Views/GatheredList;
+			sourceTree = "<group>";
+		};
+		651683F0262421B100220B09 /* GatheredSummary */ = {
+			isa = PBXGroup;
+			children = (
+				65F27B40261E000E00049A4E /* SummaryViewController.swift */,
+				655739322621D5CB008AD45D /* SummaryTableViewCell.swift */,
+				655739332621D5CB008AD45D /* SummaryTableViewCell.xib */,
+			);
+			path = GatheredSummary;
+			sourceTree = "<group>";
+		};
+		651683F1262421CF00220B09 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				651683C0262358E900220B09 /* DrawRectangle.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		651683F2262421E400220B09 /* GatheredDetails */ = {
+			isa = PBXGroup;
+			children = (
+				6576EBB42619C21E005F922D /* GatheredDetailsViewController.swift */,
+			);
+			path = GatheredDetails;
+			sourceTree = "<group>";
+		};
+		651683F62624220700220B09 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				6576EBAF2619C0EF005F922D /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		6586AA552617073600D3D0F8 = {
 			isa = PBXGroup;
 			children = (
@@ -276,16 +322,20 @@
 		6586AA602617073600D3D0F8 /* Gather-Test */ = {
 			isa = PBXGroup;
 			children = (
-				6586AA612617073600D3D0F8 /* AppDelegate.swift */,
-				6586AA6A2617073700D3D0F8 /* Assets.xcassets */,
 				6586AA6F2617073700D3D0F8 /* Info.plist */,
-				6586AA6C2617073700D3D0F8 /* LaunchScreen.storyboard */,
+				6586AA612617073600D3D0F8 /* AppDelegate.swift */,
 				6586AA632617073600D3D0F8 /* SceneDelegate.swift */,
-				65EA2E0C26173D4F009F80B2 /* Managers */,
-				65085EBC26170A940064F777 /* GatheredData */,
-				65EA2DFC2617395B009F80B2 /* Views */,
+				6586AA6A2617073700D3D0F8 /* Assets.xcassets */,
+				651683F62624220700220B09 /* Constants */,
 				65EA2DF826173917009F80B2 /* DataModels */,
-				6576EBAF2619C0EF005F922D /* Constants.swift */,
+				65085EBC26170A940064F777 /* GatheredData */,
+				651683F2262421E400220B09 /* GatheredDetails */,
+				651683EC2624219800220B09 /* GatheredList */,
+				651683F0262421B100220B09 /* GatheredSummary */,
+				651683F1262421CF00220B09 /* Helpers */,
+				6586AA6C2617073700D3D0F8 /* LaunchScreen.storyboard */,
+				6586AA672617073600D3D0F8 /* Main.storyboard */,
+				65EA2E0C26173D4F009F80B2 /* Managers */,
 			);
 			path = "Gather-Test";
 			sourceTree = "<group>";
@@ -316,23 +366,6 @@
 				651683BB2623566D00220B09 /* SummartModel.swift */,
 			);
 			path = DataModels;
-			sourceTree = "<group>";
-		};
-		65EA2DFC2617395B009F80B2 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				6586AA652617073600D3D0F8 /* GatheredListViewController.swift */,
-				655FDAFF26235249007FEA42 /* GatheredListDataSource.swift */,
-				6576EBB42619C21E005F922D /* GatheredDetailsViewController.swift */,
-				651683C0262358E900220B09 /* DrawRectangle.swift */,
-				65F27B40261E000E00049A4E /* SummaryViewController.swift */,
-				655739322621D5CB008AD45D /* SummaryTableViewCell.swift */,
-				655739332621D5CB008AD45D /* SummaryTableViewCell.xib */,
-				6576EBBF2619CFE4005F922D /* ImageCollectionViewCell.swift */,
-				6576EBC02619CFE4005F922D /* ImageCollectionViewCell.xib */,
-				6586AA672617073600D3D0F8 /* Main.storyboard */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		65EA2E0C26173D4F009F80B2 /* Managers */ = {
