@@ -30,8 +30,15 @@ final class GatheredDetailsViewController: UIViewController {
         
         setupImageView()
         addToggleButton()
-        drawRectangles()
     }
+    
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        drawRectangles()
+        //view.layoutIfNeeded()
+    }
+    
 
     private func setupImageView() {
         if let image = gatheredData?.imageName {
@@ -58,17 +65,10 @@ final class GatheredDetailsViewController: UIViewController {
             return
         }
         
+//        rectangleView.translatesAutoresizingMaskIntoConstraints = false
+//        imageview.translatesAutoresizingMaskIntoConstraints = false
         let drawRectangle = DrawRectangle(gatheredData: gatheredData)
-        drawRectangle.drawRectangles(on: rectangleView)
-    }
-    
-    private func addBorderView(_ rectangle: CGRect, _ color: UIColor) {
-        let borderView = UIView(frame: rectangle)
-        borderView.layer.borderColor = color.cgColor
-        borderView.frame = borderView.frame.insetBy(dx: -rectangleBorderWidth, dy: -rectangleBorderWidth);
-        borderView.layer.borderWidth  = rectangleBorderWidth
-        borderView.backgroundColor = .clear
-        rectangleView.addSubview(borderView)
+        drawRectangle.drawRectangles(on: recta)
     }
 }
 
